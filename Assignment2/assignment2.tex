@@ -1,0 +1,57 @@
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+
+\begin{abstract}
+This document contains the solution to a probability question.\\
+\end{abstract}
+Download all python codes from 
+%
+\begin{lstlisting}
+https://github.com/Jayanth9969/EE5600/blob/master/Assignment2/code.py
+\end{lstlisting}
+
+\section{Problem}
+
+A die is thrown twice and the sum of the 
+numbers appearing is observed to be 6. What
+is the probability that the number 4 has appeared 
+at least once? \\ \\ 
+
+\section{Solution}
+
+\begin{enumerate}
+    Let A represent of all possible pairs from the die that makes sum 6.\\ 
+    n(A) represents Number of elements in set A.
+    \begin{align}
+        A &= \{(1,5),(2,4),(3,3),(4,2),(5,1)\} \\ 
+        n(A) &= 5 
+    \end{align}
+
+    Let B represent all possible pairs from the die that have atleast one 4\\ 
+    n(B) represents Number of elements in set B.
+    \begin{align}
+        B &= \{(1,4),(4,1),(2,4),(4,2),(3,4),(4,3),(4,4),(4,5),(5,4),(4,6),(6,4)\}\\
+        n(B) &= 11
+    \end{align}
+    Now,
+    Let C represent all possible pairs from the die that makes sum 6 and having atleast one 4 in each pair.So,\\ 
+    n(C) represents Number of elements in C.then,
+    \begin{align}
+        C &= A \cap B \\ 
+        C &= \{(4,2),(2,4\}\\ 
+        n(C) &= 2 
+    \end{align}
+    
+    Probabilty that number 4 appearing atleast once given condition that sum of numbers is 6 is given by $Pr(B|A)$ 
+    \begin{align}
+        Pr(B|A) &= \frac{Pr(A \cap B)}{Pr(A)} \\
+        &= \frac{Pr(C)}{Pr(A)} \\ 
+        &= \frac{\frac{n(C)}{36}}{\frac{n(A)}{36}}\\
+        &= \frac{n(C)}{n(A)}\\
+        &= \frac{2}{5} \\ 
+        &= 0.4
+    \end{align}
+    Thus probability that the number 4 has appeared at least once when a die is thrown is twice and sum of numbers Observed is 6 is 0.4.
+\end{enumerate}
+
+\end{enumerate}
